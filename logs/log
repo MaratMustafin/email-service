@@ -1,0 +1,108 @@
+00:10:14,488 EmailServiceLogger INFO Request:create_email
+00:10:14,488 EmailServiceLogger INFO Email created
+00:17:32,222 EmailServiceLogger INFO Request:create_email
+00:17:32,222 EmailServiceLogger INFO Email created
+00:17:35,531 EmailServiceLogger ERROR can only concatenate str (not "TypeError") to str
+Traceback (most recent call last):
+  File "/home/maratmustafin/2023/python/app/lib/send_email.py", line 24, in send_mail
+    logger.info(f"Email sended:" + message)
+TypeError: can only concatenate str (not "MIMEText") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maratmustafin/2023/python/app/api/v1/endpoints/emails.py", line 34, in create_email
+    response = send_mail(content)
+  File "/home/maratmustafin/2023/python/app/lib/send_email.py", line 27, in send_mail
+    logger.error(f"Email corrupted:" + e)
+TypeError: can only concatenate str (not "TypeError") to str
+00:17:46,60 EmailServiceLogger INFO Request:create_email
+00:17:46,60 EmailServiceLogger INFO Email created
+00:18:15,298 EmailServiceLogger INFO Request:create_email
+00:18:15,298 EmailServiceLogger INFO Email created
+00:19:01,404 EmailServiceLogger INFO Request:create_email
+00:19:01,404 EmailServiceLogger INFO Email created
+00:19:06,876 EmailServiceLogger INFO Email sended:Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: player@gmail.com
+To: user@example.com
+Subject: Subject
+
+Message
+01:16:47,376 asyncio DEBUG Using selector: EpollSelector
+01:18:18,519 asyncio DEBUG Using selector: EpollSelector
+01:18:50,427 asyncio DEBUG Using selector: EpollSelector
+01:18:50,437 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email/ "HTTP/1.1 404 Not Found"
+01:19:06,696 asyncio DEBUG Using selector: EpollSelector
+01:19:06,707 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email "HTTP/1.1 404 Not Found"
+01:20:21,329 asyncio DEBUG Using selector: EpollSelector
+01:20:21,353 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email "HTTP/1.1 404 Not Found"
+01:20:47,778 EmailServiceLogger INFO Request:create_email
+01:20:47,778 EmailServiceLogger INFO Content created...
+01:20:51,179 EmailServiceLogger INFO Email sended:Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: player@gmail.com
+To: user@example.com
+Subject: Subject
+
+Message
+01:22:02,418 asyncio DEBUG Using selector: EpollSelector
+01:22:02,431 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email "HTTP/1.1 404 Not Found"
+01:22:32,192 asyncio DEBUG Using selector: EpollSelector
+01:22:32,204 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email "HTTP/1.1 404 Not Found"
+01:22:46,124 asyncio DEBUG Using selector: EpollSelector
+01:22:46,138 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email "HTTP/1.1 404 Not Found"
+01:23:49,592 EmailServiceLogger INFO Request:create_email
+01:23:49,592 EmailServiceLogger INFO Content created...
+01:23:52,734 EmailServiceLogger INFO Email sended:Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: player@gmail.com
+To: user@example.com
+Subject: Subject
+
+Message
+01:26:55,181 asyncio DEBUG Using selector: EpollSelector
+01:26:55,194 httpx INFO HTTP Request: POST http://testserver/api/v1/test "HTTP/1.1 404 Not Found"
+01:26:55,196 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email "HTTP/1.1 404 Not Found"
+01:27:04,191 asyncio DEBUG Using selector: EpollSelector
+01:27:04,204 httpx INFO HTTP Request: POST http://testserver/test "HTTP/1.1 200 OK"
+01:27:04,206 httpx INFO HTTP Request: POST http://testserver/api/v1/send_email "HTTP/1.1 404 Not Found"
+01:27:24,581 asyncio DEBUG Using selector: EpollSelector
+01:27:24,594 EmailServiceLogger INFO Request:create_email
+01:27:24,594 EmailServiceLogger INFO Content created...
+01:27:27,982 EmailServiceLogger INFO Email sended:Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: player@gmail.com
+To: you@you.com
+Subject: World
+
+Hello World
+01:27:28,185 httpx INFO HTTP Request: POST http://testserver/send_email "HTTP/1.1 201 Created"
+01:28:40,593 asyncio DEBUG Using selector: EpollSelector
+01:28:40,604 EmailServiceLogger INFO Request:create_email
+01:28:40,605 EmailServiceLogger INFO Content created...
+01:28:43,345 EmailServiceLogger INFO Email sended:Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: player@gmail.com
+To: you@you.com
+Subject: World
+
+Hello World
+01:28:43,553 httpx INFO HTTP Request: POST http://testserver/send_email "HTTP/1.1 201 Created"
+01:29:01,618 asyncio DEBUG Using selector: EpollSelector
+01:29:01,631 EmailServiceLogger INFO Request:create_email
+01:29:01,631 EmailServiceLogger INFO Content created...
+01:29:04,296 EmailServiceLogger INFO Email sended:Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: player@gmail.com
+To: you@you.com
+Subject: World
+
+Hello World
+01:29:04,463 httpx INFO HTTP Request: POST http://testserver/send_email "HTTP/1.1 201 Created"
